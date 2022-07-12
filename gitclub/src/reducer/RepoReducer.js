@@ -1,8 +1,13 @@
-function RepoReducer(state = [], action) {
+const initState = [
+  {
+    username: "brhanuh",
+  },
+];
+
+function RepoReducer(state = initState, action) {
   switch (action.type) {
     case "ADD":
-      state = action.payload;
-      return state;
+      return action.payload;
     default:
       return state;
   }
