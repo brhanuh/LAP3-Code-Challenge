@@ -1,4 +1,4 @@
-import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { IndexPage, RepoPage, SearchPage } from "./pages";
@@ -12,7 +12,7 @@ function App() {
           <Route path="/" element={<IndexPage />}></Route>
           <Route path="search">
             <Route path="/search" element={<SearchPage />}></Route>
-            <Route path=":username" element={<RepoPage />}></Route>
+            <Route path=":username/:repo" element={<RepoPage />}></Route>
           </Route>
         </Route>
       </Routes>
